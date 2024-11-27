@@ -1,0 +1,4 @@
+nohup.out
+__pycache__/
+*.log
+*.tar.gz
