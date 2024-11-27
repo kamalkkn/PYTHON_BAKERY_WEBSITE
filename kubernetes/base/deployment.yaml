@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-bakery
+  labels:
+    app: python-bakery
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: python-bakery
+  template:
+    metadata:
+      labels:
+        app: python-bakery
+    spec:
+      containers:
+      - name: python-bakery
+        image: kamalakannan72/python-bakery-website:v1
+        ports:
+        - containerPort: 5000
+
